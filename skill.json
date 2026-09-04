@@ -1,0 +1,39 @@
+{
+  "name": "genpark-statistical-anomaly-zscore-detector-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multi-dimensional statistical anomaly and IQR outlier detector flagging critical distribution spikes in business metrics.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "data-analytics",
+  "tags": [
+    "anomaly-detection",
+    "z-score",
+    "outliers",
+    "statistics",
+    "bi-monitoring"
+  ],
+  "inputs": {
+    "metric_series_name": {
+      "type": "string"
+    },
+    "values": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "anomaly_detection_id": {
+      "type": "string"
+    },
+    "anomalies_detected_count": {
+      "type": "integer"
+    },
+    "max_zscore_observed": {
+      "type": "number"
+    },
+    "statistical_report_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
